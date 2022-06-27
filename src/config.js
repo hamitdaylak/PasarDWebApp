@@ -47,6 +47,7 @@ const addressForProduction = {
 const addressForTest = {
   stickerContract: "0xA4b6ca4c59F2FA0c122e702ED6830fea48e635f9",
   feedsContract: "0xed1978c53731997f4DAfBA47C9b07957Ef6F3961",
+  elaContractOnEth: "0x8c947E0fA67e91370587076A4108Df17840e9982",
   // erc20Contract: "0xf5d461622Df01421c3b6082F962fD7711E94a579",
   marketContract: "0xC1c2f0f2b4A6e7aB99Bf588930Dcbb5dD6690F30",
   v1marketContract: "0x2652d10A5e525959F7120b56f2D7a9cD0f6ee087",
@@ -70,7 +71,7 @@ const escServerForTest = "https://esc-test.elastos.io"
 const ApplicationDIDForMain = "did:elastos:iZvAak2SUHaKwBHmPFsgtVVMGtTpi4r2kY"
 // const ApplicationDIDForTest = "did:elastos:ic8pRXyAT3JqEXo4PzHQHv5rsoYyEyDwpB"
 
-export const {stickerContract, feedsContract, marketContract, v1marketContract, registerContract, diaContract, welaContract, glideContract, 
+export const {stickerContract, feedsContract, elaContractOnEth, marketContract, v1marketContract, registerContract, diaContract, welaContract, glideContract, 
   elkContract, ethUsdcContract, bunnyContract, bnbBusdContract, blockchain} = process.env.REACT_APP_ENV==="production"?addressForProduction:addressForTest
 export const mainDiaContract = addressForProduction.diaContract
 

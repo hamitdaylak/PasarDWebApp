@@ -10,6 +10,7 @@ import jwtDecode from 'jwt-decode';
 
 import { essentialsConnector } from '../components/signin-dlg/EssentialConnectivity';
 import { 
+  elaContractOnEth as ELA_CONTRACT_ADDRESS,
   stickerContract as STICKER_ADDRESS, 
   marketContract as MARKET_CONTRACT_ADDRESS, 
   v1marketContract as V1_MARKET_CONTRACT_ADDRESS,
@@ -29,7 +30,8 @@ import { ERC20_CONTRACT_ABI } from '../abi/diamondABI';
 import { REGISTER_CONTRACT_ABI } from '../abi/registerABI';
 import { COMMON_CONTRACT_ABI } from '../abi/commonABI';
 
-const pricingContract = [blankAddress, DIA_CONTRACT_ADDRESS, WELA_CONTRACT_ADDRESS, GLIDE_CONTRACT_ADDRESS, ELK_CONTRACT_ADDRESS, EUSDC_CONTRACT_ADDRESS, BUNNY_CONTRACT_ADDRESS, BUSD_CONTRACT_ADDRESS]
+// const pricingContract = [blankAddress, DIA_CONTRACT_ADDRESS, WELA_CONTRACT_ADDRESS, GLIDE_CONTRACT_ADDRESS, ELK_CONTRACT_ADDRESS, EUSDC_CONTRACT_ADDRESS, BUNNY_CONTRACT_ADDRESS, BUSD_CONTRACT_ADDRESS]
+const pricingContract = [blankAddress, ELA_CONTRACT_ADDRESS]
 const ipfsUrls = [PasarIpfs, 'https://ipfs.ela.city', 'https://gateway.pinata.cloud']
 
 // Get Abbrevation of hex addres //
@@ -666,45 +668,50 @@ export const collectionTypes = [
 ]
 export const coinTypes = [
   {
-    icon: 'elastos.svg',
-    name: 'ELA',
+    icon: 'eth.svg',
+    name: 'ETH',
     address: blankAddress
   },
   {
-    icon: 'badges/diamond.svg',
-    name: 'DIA',
-    address: DIA_CONTRACT_ADDRESS
+    icon: 'elastos.svg',
+    name: 'ELA',
+    address: ELA_CONTRACT_ADDRESS
   },
-  {
-    icon: 'erc20/WELA.png',
-    name: 'WELA',
-    address: WELA_CONTRACT_ADDRESS
-  },
-  {
-    icon: 'erc20/Glide.png',
-    name: 'GLIDE',
-    address: GLIDE_CONTRACT_ADDRESS
-  },
-  {
-    icon: 'erc20/Elk.png',
-    name: 'ELK',
-    address: ELK_CONTRACT_ADDRESS
-  },
-  {
-    icon: 'erc20/EUSDC.png',
-    name: 'ethUSDC',
-    address: EUSDC_CONTRACT_ADDRESS
-  },
-  {
-    icon: 'erc20/Bunny.png',
-    name: 'BUNNY',
-    address: BUNNY_CONTRACT_ADDRESS
-  },
-  {
-    icon: 'erc20/BUSD.png',
-    name: 'bnbBUSD',
-    address: BUSD_CONTRACT_ADDRESS
-  }
+  // {
+  //   icon: 'badges/diamond.svg',
+  //   name: 'DIA',
+  //   address: DIA_CONTRACT_ADDRESS
+  // },
+  // {
+  //   icon: 'erc20/WELA.png',
+  //   name: 'WELA',
+  //   address: WELA_CONTRACT_ADDRESS
+  // },
+  // {
+  //   icon: 'erc20/Glide.png',
+  //   name: 'GLIDE',
+  //   address: GLIDE_CONTRACT_ADDRESS
+  // },
+  // {
+  //   icon: 'erc20/Elk.png',
+  //   name: 'ELK',
+  //   address: ELK_CONTRACT_ADDRESS
+  // },
+  // {
+  //   icon: 'erc20/EUSDC.png',
+  //   name: 'ethUSDC',
+  //   address: EUSDC_CONTRACT_ADDRESS
+  // },
+  // {
+  //   icon: 'erc20/Bunny.png',
+  //   name: 'BUNNY',
+  //   address: BUNNY_CONTRACT_ADDRESS
+  // },
+  // {
+  //   icon: 'erc20/BUSD.png',
+  //   name: 'bnbBUSD',
+  //   address: BUSD_CONTRACT_ADDRESS
+  // }
 ]
 export const socialTypes = ['Website', 'Profile', 'Feeds', 'Twitter', 'Discord', 'Telegram', 'Medium']
 export const getCoinTypeFromToken = (item) => {
