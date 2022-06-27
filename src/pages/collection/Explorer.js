@@ -70,10 +70,10 @@ export default function Explorer() {
   const handleNavlink = (e)=>{
     const path = e.target.getAttribute('to')
     if(sessionStorage.getItem('PASAR_LINK_ADDRESS') === '2') {
-      if(diaBalance>=0.01)
+      // if(diaBalance>=0.01)
         navigate(path)
-      else
-        setOpenBuyDIA(true)
+      // else
+        // setOpenBuyDIA(true)
       return
     }
     if(sessionStorage.getItem('PASAR_LINK_ADDRESS') === '1' || sessionStorage.getItem('PASAR_LINK_ADDRESS') === '3')

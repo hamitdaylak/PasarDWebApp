@@ -45,13 +45,13 @@ const addressForProduction = {
 }
 
 const addressForTest = {
-  stickerContract: "0x32496388d7c0CDdbF4e12BDc84D39B9E42ee4CB0",
+  stickerContract: "0xA4b6ca4c59F2FA0c122e702ED6830fea48e635f9",
   feedsContract: "0xed1978c53731997f4DAfBA47C9b07957Ef6F3961",
   // erc20Contract: "0xf5d461622Df01421c3b6082F962fD7711E94a579",
-  marketContract: "0x19088c509C390F996802B90bdc4bFe6dc3F5AAA7",
+  marketContract: "0xC1c2f0f2b4A6e7aB99Bf588930Dcbb5dD6690F30",
   v1marketContract: "0x2652d10A5e525959F7120b56f2D7a9cD0f6ee087",
-  registerContract: "0x2b304ffC302b402785294629674A8C2b64cEF897",
-  diaContract: "0x85946E4b6AB7C5c5C60A7b31415A52C0647E3272",
+  registerContract: "0x73c7fa921fE366aDcCC241E11A5A120198D2364c",
+  diaContract: "0x0000000000000000000000000000000000000000",
   welaContract: "0x517E9e5d46C1EA8aB6f78677d6114Ef47F71f6c4",
   glideContract: "0xd39eC832FF1CaaFAb2729c76dDeac967ABcA8F27",
   elkContract: "0xE1C110E1B1b4A1deD0cAf3E42BfBdbB7b5d7cE1C",
@@ -62,10 +62,10 @@ const addressForTest = {
 }
 
 const rpcUrlForMain = "https://api.elastos.io/eth"
-const rpcUrlForTest = "https://api-testnet.elastos.io/eth"
+const rpcUrlForTest = "https://mainnet.infura.io/v3/8afb20a70e1047f19ed6f7419ba5381e"
 
 const escServerForMain = "https://esc.elastos.io"
-const escServerForTest = "https://esc-testnet.elastos.io"
+const escServerForTest = "https://esc-test.elastos.io"
 
 const ApplicationDIDForMain = "did:elastos:iZvAak2SUHaKwBHmPFsgtVVMGtTpi4r2kY"
 // const ApplicationDIDForTest = "did:elastos:ic8pRXyAT3JqEXo4PzHQHv5rsoYyEyDwpB"
