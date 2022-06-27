@@ -177,7 +177,7 @@ export default function MarketExplorer() {
     
     if(!loadNext)
       setAssets([])
-    fetchFrom(`api/v2/sticker/getDetailedCollectibles?`+
+      fetchFrom(`api/v2/sticker/getDetailedCollectibles?`+
       `collectionType=${selectedCollections.join(',')}&`+
       `tokenType=${selectedTokens.join(',')}&`+
       `status=${statusFilter}&`+
@@ -189,13 +189,13 @@ export default function MarketExplorer() {
       `keyword=${params.key?params.key:''}&`+
       `pageNum=${page}&`+
       `pageSize=${showCount}`, { signal }).then(response => {
-      response.json().then(jsonAssets => {
-        if(jsonAssets.data){
-          setTotalCount(jsonAssets.data.total)
-          setPages(Math.ceil(jsonAssets.data.total/showCount));
-          if(loadNext)
+        response.json().then(jsonAssets => {
+          if(jsonAssets.data){
+            setTotalCount(jsonAssets.data.total)
+            setPages(Math.ceil(jsonAssets.data.total/showCount));
+            if(loadNext)
             setAssets([...assets, ...jsonAssets.data.result]);
-          else {
+            else {
             setAssets(jsonAssets.data.result);
             // window.scrollTo(0,0)
           }
